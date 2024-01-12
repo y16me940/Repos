@@ -1,11 +1,11 @@
-ID=$(id -u)
+ID=$(id -u root)
 
 #Check the Root Access
 if [ $ID -ne 0 ]
 then
-echo "You are not the Root user to execute this script"
+echo "$R You are not the Root user to execute this script"
 else
-echo "You are the root user and good to proceed"
+echo "$G You are the root user and good to proceed"
 fi
 
 #colours defining
@@ -21,7 +21,7 @@ validate(){
     exit 2
     else
     echo -e "$2.........  $G SUCCESS/n"
-
+    fi
 }
 
 #Disabling existing nodejs version
