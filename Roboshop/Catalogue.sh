@@ -3,9 +3,9 @@ ID=$(id -u root)
 #Check the Root Access
 if [ $ID -ne 0 ]
 then
-echo "$R You are not the Root user to execute this script"
+echo -e "$R You are not the Root user to execute this script"
 else
-echo "$G You are the root user and good to proceed"
+echo -e "$G You are the root user and good to proceed"
 fi
 
 #colours defining
@@ -15,12 +15,12 @@ Y="\e[33m"
 
 #Validatin of command execution and dynamic statements printiing
 validate(){
-    if [ $1 ne 0]
+    if [ $1 ne 0 ]
     then
-    echo -e "$2.......... $R FAILURE/n"
+    echo -e "$R $2..........  FAILURE/n"
     exit 2
     else
-    echo -e "$2.........  $G SUCCESS/n"
+    echo -e "$G $2.........   SUCCESS/n"
     fi
 }
 
