@@ -5,16 +5,16 @@
   - name: Installing Nginix
     ansible.builtin.package:
       name: nginx
-      status: present
+      state: present
 
   - name: Stating Nginx and enabling
     ansible.builtin.service:
       name: nginx
-      status: started
+      state: started
 
   - name: Stating Nginx and enabling  
     ansible.builtin.service:
       name: nginx
-      status: enabled
+      state: enabled
 
 
